@@ -1,0 +1,4 @@
+# Properties for spring.
+spring:
+  application:
+    name: eureka-client     # MUST be here.

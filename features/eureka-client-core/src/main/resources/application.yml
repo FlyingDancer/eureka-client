@@ -1,0 +1,12 @@
+# Properties for server
+server:
+  port: 0   # Random port.
+
+# Properties for eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:33062/eureka/     # Registration center.
+  instance:
+      hostname: localhost
+      instance-id: ${spring.application.name}:${random.int}   # Random instance id.

@@ -1,0 +1,14 @@
+rootProject.name = projectName
+
+def subProjectsDir = new File('features')
+if (subProjectsDir.isDirectory()) {
+    subProjectsDir.eachDir {
+        if (new File(it, 'build.gradle').isFile()) {
+            include it.name
+        }
+    }
+}
+
+rootProject.children.each {
+    it.projectDir = new File(rootDir, "features/${it.name}")
+}
